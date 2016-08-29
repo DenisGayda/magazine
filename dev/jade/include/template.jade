@@ -1,0 +1,12 @@
+include mixins
+doctype html
+html
+	head
+		block title
+		meta(charset="utf-8")
+		block style
+	body
+		include header
+		block content
+		include footer
+		script(src='js/script.js').

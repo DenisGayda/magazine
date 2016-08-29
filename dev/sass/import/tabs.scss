@@ -1,0 +1,20 @@
+.tabs {
+	background: linear-gradient(to bottom, #2f3638, #5c6b6e);
+	.tabs__menu {
+		display: inline-block;
+		width: 26.48936%;
+		.tabs__menu_item {
+			cursor: pointer;
+		}
+	}
+	.tabs__image {
+		display: inline-block;
+		width: 71.91489%;
+		.tabs__image_item {
+			display: none;
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+}

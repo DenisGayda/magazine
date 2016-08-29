@@ -1,0 +1,18 @@
+.footer__menu{
+	background: linear-gradient(to bottom, #5e6c70, #303739);
+	border: none;
+	.menu__list {
+		width: 100%;
+		.menu__list_item {
+			padding: 0 6.9148936%; // 65px // 940px *100
+			border-right-color: #bfcbce;
+			margin: 12px 0;
+			&:first-child {
+				padding-left: 6.9148936%;
+			}
+			a {
+				@include fontHelvetica(0.8125em, 1em, #fff); // 13px / 16px * 100
+				}
+			}
+		}
+	}

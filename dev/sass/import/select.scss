@@ -1,0 +1,29 @@
+.select {
+	width: 115px;
+	height: 22px;
+	line-height: 22px;
+	position: relative;
+	background: none;
+	z-index: 100;
+}
+
+.select-outer {
+	width: 93px;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.select-button {
+	background: url(image/SelectButton.png) center center no-repeat;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 50;
+}

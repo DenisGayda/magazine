@@ -1,0 +1,37 @@
+header.header
+	div.header__content.wraper
+		.header__content_right
+			.header__logo
+				.header__logo_img
+					img(src="image/logo.png", alt="logo")
+				.header__logo_text
+					h1 SALES
+						span Point
+					p The Best Store Online
+		.header__content_left
+				.header__cart
+					a(href="#") Shoping Cart
+					p now in your cart 
+						span#countBuys 0 items
+				.header__select
+					.header-select__content
+						.header__select_language
+							p.header__select_text Language:
+							div.header__select_form.select-outer
+								select#selectLanguage.select
+									option English
+									option English
+									option English
+								a.select-button
+						.header__select_currency
+							p.header__select_text Currency:
+							div.header__select_form.select-outer
+								select#selectCurrency.select
+									option US Dollar
+								a.select-button
+	div.header__menu.wraper.menu
+		+addList({'Home':'index.html', 'What\'s new':'whatsNew.html', 'Specials':'specials.html', 'My Account':'account.html', 'Contacts':'contacts.html'}, 'menu__list', 'menu__list_item')
+		.heder-menu__search
+			form.heder-search__form
+				input.heder-search__form_field(type="search")
+				input.heder-search__form_button(type="submit")

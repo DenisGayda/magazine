@@ -1,0 +1,8 @@
+mixin addList(arr, arr1, arr2)
+	ul(class=arr1)
+		each val,index in arr
+			li(class=arr2): a(href= val) #{index}
+
+mixin addCss(arg)
+	each val in arg
+		link(rel='stylesheet' href='css/#{val}.css')

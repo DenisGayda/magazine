@@ -1,0 +1,15 @@
+$blue: #0bb1e8;
+
+@mixin fontHelvetica($fz, $lh, $color, $ff:Helvetica){
+	font-family: $ff;
+	font-size: $fz;
+	line-height: $lh;
+	color: $color;
+}
+
+@mixin fontArial($fz, $lh, $color, $ff:Arial){
+	font-family: $ff;
+	font-size: $fz;
+	line-height: $lh;
+	color: $color;
+}
