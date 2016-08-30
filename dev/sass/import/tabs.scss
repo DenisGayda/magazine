@@ -1,19 +1,102 @@
-.tabs {
+@import './import/mixin.scss';
+.tabs__content {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 5px;
 	background: linear-gradient(to bottom, #2f3638, #5c6b6e);
 	.tabs__menu {
-		display: inline-block;
-		width: 26.48936%;
+		width: 26.89%; // 249px / 946px * 100
 		.tabs__menu_item {
 			cursor: pointer;
+			padding: 7.545% 0;
+			background: linear-gradient(to bottom, #e5e5e5, #fff);
+			span {
+				@include fontHelvetica(1.12em, 1em, #2f3638);
+				text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.5);
+			}
+			a {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				background-image: url(../image/button.png);
+				vertical-align: bottom;
+				margin: 0 10px 0 18px;
+			}
+		}
+		.tabs__menu_active {
+			background: transparent;
+			span {
+				color: #fff;
+			}
 		}
 	}
 	.tabs__image {
-		display: inline-block;
-		width: 71.91489%;
+		width: 73.003%; // 249px / 946px * 100
 		.tabs__image_item {
+			height: 100%;
 			display: none;
 			&:first-child {
 				display: block;
+			}
+			.content {
+				text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.5);
+				color: #fff;
+				font-family: Helvetica;
+				letter-spacing: 1;
+				.title,
+				.title_second {
+					font-weight: 700;
+				}
+				.text {
+					font-size: 1.25em;
+				}
+				.title {
+					font-size: 2.75em; // 44/16
+				}
+			}
+		}
+		#tabs-1 {
+			background: url(../image/device.png) no-repeat center right;
+			.content {
+				padding: 14.202% 0 0 6.214%; // 96/676 : 42/676
+				.title_second {
+					font-size: 1.75em; // 28/16
+				}
+			}
+		}
+		#tabs-2 {
+			background: url(../image/monitor.png) no-repeat bottom right;
+			.content {
+				padding: 15.385% 0 0 9.172%; // 104/676 : 62/676
+				.title_second {
+					font-size: 2.125em; //34/16
+				}
+			}
+		}
+		#tabs-3 {
+			background: url(../image/proector.png) no-repeat center right;
+			.content {
+				padding: 17.604% 0 0 9.172%; // 119/676 : 62/676
+			}
+		}
+		#tabs-4 {
+			background: url(../image/mp3player.png) no-repeat bottom right;
+			.content {
+				padding: 17.604% 0 0 9.172%; // 119/676 : 62/676
+			}
+		}
+		#tabs-5 {
+			background: url(../image/camera.png) no-repeat center right;
+			.content {
+				padding: 12.87% 0 0 6.214%; // 87/676 : 42/676
+				max-width: 255px;
+				.title_second {
+					font-size: 3.75em; //60/16
+					text-align: center;
+				}
+				.text {
+					text-align: center;
+				}
 			}
 		}
 	}

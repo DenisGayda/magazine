@@ -1,6 +1,6 @@
-.tabs
+.tabs__content
 	.tabs__menu
-		.tabs__menu_item(data-tabs='tabs-1')
+		.tabs__menu_item.tabs__menu_active(data-tabs='tabs-1')
 			a.menu-item__button(href='#')
 			span 50% Discount Insanity
 		.tabs__menu_item(data-tabs='tabs-2')
@@ -17,12 +17,26 @@
 			span Summertime Discount
 	.tabs__image
 		#tabs-1.tabs__image_item
-			img(src='image/device.png')
+			.content
+				p.title_second Huge discounts
+				p.text and only one promo day!
+				p.title Don’t hesitate!
 		#tabs-2.tabs__image_item
-			img(src='image/monitor.png')
+			.content
+				p.text Nice chance to get what you want!
+				p.title_second Discounts for new items
+				p.title are active!
 		#tabs-3.tabs__image_item
-			img(src='image/proector.png')
+			.content
+				p.text Great Promo for all mobile fans!
+				p.title Don’t miss!
 		#tabs-4.tabs__image_item
-			img(src='image/mp3player.png')
+			.content
+				p.text Welcome high-grade solutions
+				p.title at a 10% discount
 		#tabs-5.tabs__image_item
-			img(src='image/camera.png')
+			.content
+				p.title Check out
+				p.title_second 20%
+				p.text discount for all items during summertime!
+
