@@ -12,7 +12,9 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync').create(),
 	jade = require('gulp-jade'),
 	uglify = require('gulp-uglifyjs'),
-	notify = require('gulp-notify');
+	notify = require('gulp-notify'),
+	webpackStream = require('webpack-stream'),
+	webpack = webpackStream.webpack;
 
 gulp.task('mincss', function() {
 	return gulp.src('./dev/sass/*.scss')
@@ -33,13 +35,34 @@ gulp.task('mincss', function() {
 		.pipe(browserSync.stream())
 });
 
-gulp.task('compress', function(){
+gulp.task('webpack', function(){
+	let options = {
+		entry: "./dev/js/components/Main.js",
+		output: {
+			filename: 'bundle.js'
+		},
+		module: {
+			loaders: [
+				{
+					test: /\.js$/,
+					exclude: /node_modules/,
+					loader: 'babel',
+					query: {
+						presets: ['es2015', 'react']
+					}
+				}
+			]
+		}
+	}
 	return gulp.src('./dev/js/*.js')
-		.pipe(plumber())
-		.pipe(uglify().on('error', notify.onError({
-			message: '<%= error.message %>',
-			title: 'JS Error!'
-		})))
+		.pipe(plumber({
+			errorHandler: notify.onError(err => ({
+				title: 'Webpack Error!',
+				message: '<%= error.message %>',
+			}))
+		}))
+		.pipe(webpackStream(options))
+		.pipe(uglify())
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest('./site/js/'))
 		.pipe(notify('JavaScript - OK!'))
@@ -81,7 +104,7 @@ gulp.task('base', function(){
 		.pipe(gulp.dest('./site'));
 })
 
-gulp.task('watch', ['mincss', 'jade', 'compress'] ,function(done){
+gulp.task('watch', ['mincss', 'jade', 'webpack'] ,function(done){
 	browserSync.reload();
 	done()
 });
@@ -92,11 +115,11 @@ gulp.task('serve', ['mincss', 'jade'], function(){
 	});
 	gulp.watch('./dev/sass/**/*.scss', ['mincss']);
 	gulp.watch('./dev/jade/**/*.jade', ['jade']);
-	gulp.watch('./dev/js/*.js', ['compress']);
+	gulp.watch('./dev/js/**/*.js', ['webpack']);
 });
 
 
-gulp.task('build', ['imgmin', 'mincss', 'jade', 'compress']);
+gulp.task('build', ['imgmin', 'mincss', 'jade', 'webpack']);
 gulp.task('default', ['watch', 'serve']);
 
 
