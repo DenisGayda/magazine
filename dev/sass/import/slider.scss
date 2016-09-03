@@ -1,0 +1,38 @@
+@import './import/mixin.scss';
+.slider {
+	.slider__title {
+		@include fontHelvetica(1.5em, 1em, #2f3638);
+		text-shadow: 0.7px 0.7px 0 white;
+		font-weight: lighter;
+		span {
+			color: $blue;
+		}
+	}
+	.slider__block {
+		display: flex;
+		justify-content: space-between;
+		#slider__button_left,
+		#slider__button_rigth {
+			button {
+				margin-top: 37px;
+				width: 11px;
+				height: 25px;
+			}
+		}
+		#slider__button_left {
+			button {
+				background: transparent url(../image/sliderArrowL.png) no-repeat center;
+			}
+		}
+		#slider__button_rigth {
+			button {
+				background: transparent url(../image/sliderArrowR.png) no-repeat;
+			}
+		}
+		#slider__content {
+			max-width: 908px;
+			height: 100px;
+			background-color: red;
+		}
+	}
+}

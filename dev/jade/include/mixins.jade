@@ -6,3 +6,8 @@ mixin addList(arr, arr1, arr2)
 mixin addCss(arg)
 	each val in arg
 		link(rel='stylesheet' href='css/#{val}.css')
+
+mixin addLists(arr, arr1, arr2)
+	ul(class=arr1)
+		each index in arr
+			li(class=arr2) #{index}

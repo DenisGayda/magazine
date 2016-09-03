@@ -1,0 +1,59 @@
+@import 'import/tabs.scss';
+@import 'import/slider.scss';
+@import './import/mixin.scss';
+
+main {
+	.section__tabs {
+		padding: 6px;
+		background-color: #f2f2f2;
+		border: 1px solid #d9d9d9;
+		border-radius: 5px;
+		margin-top: 10px;
+	}
+	.section__category {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-between;
+		.category__menu {
+			margin-left: 8px;
+			width: 240px;
+			.title {
+				width: 100%;
+				background-image: linear-gradient(to top, #f2f2f2, #fff);
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				@include fontArial(1em, 2em, #111017);
+				padding-left: 18px;
+			}
+			.menu__list {
+				list-style: none;
+				&_item {
+					@include fontArial(0.875em, 2.15em, #111017);
+					border-bottom: 1px dashed #e5e5e5;
+					padding-left: 30px;
+					position: relative;
+					cursor: pointer;
+					&:first-child {
+						margin-top: 12px;
+					}
+					&:last-child {
+						border: none;
+					}
+					&:hover {
+						font-weight: bold;
+						color: $blue;
+					}
+				}
+			}
+		}
+		#category__content {
+			max-width: 690px;
+			.content__block {
+				display: inline-block;
+				margin: 5px;
+				width: 165px;
+				height: 300px;
+			}
+		}
+	}
+}
+		
