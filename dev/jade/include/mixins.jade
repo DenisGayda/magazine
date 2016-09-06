@@ -11,3 +11,7 @@ mixin addLists(arr, arr1, arr2)
 	ul(class=arr1)
 		each index in arr
 			li(class=arr2) #{index}
+
+mixin addJs(arg)
+	each val in arg
+		script(src='js/#{val}.js').

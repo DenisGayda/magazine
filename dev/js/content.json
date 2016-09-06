@@ -5,7 +5,81 @@
 	"Video game consoles": {
 
 	},
-	"Cell-mobile-wireless phones": [
+	"featured": [
+		{
+			"src" : "image/item-mobilephone.png",
+			"fullName" : "HTC Google Nexus One Black",
+			"price": "$206.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-monitor2.png",
+			"fullName" : "Samsung 2243BWX Monitor",
+			"price": "$179.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-theater.png",
+			"fullName" : "Home Theater System",
+			"price": "$241.79",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-projector.png",
+			"fullName" : "Home Projector System",
+			"price": "$499.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-bluray.png",
+			"fullName" : "BluRay Home System",
+			"price": "$406.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-desktop.png",
+			"fullName" : "HP Pavilion A6700F Desktop PC",
+			"price": "$757.89",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-printer2.png",
+			"fullName" : "Epson WorkForce 600 Wireless",
+			"price": "$800.00",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-theater2.png",
+			"fullName" : "Samsung LN40A550 40-Inch 1080p LCD",
+			"price": "$599.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-recorder.png",
+			"fullName" : "Swann SW244-LPD Digital Recorder",
+			"price": "$319.99",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-racing.png",
+			"fullName" : "Logitech G27 Racing Wheel",
+			"price": "$363.40",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-speaker.png",
+			"fullName" : "Logitech Speaker System Z523",
+			"price": "$285.35",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		},
+		{
+			"src" : "image/item-webcam.png",
+			"fullName" : "Logitech Quickcam C500 Webcam",
+			"price": "$285.35",
+			"text": "Lorem ipsum dolor amiet consectetuer."
+		}
+	],
+	"phones": [
 		{
 			"src" : "image/item-mobilephone.png",
 			"fullName" : "HTC1 Google Nexus One Black",
@@ -93,12 +167,6 @@
 		{
 			"src" : "image/item-mobilephone.png",
 			"fullName" : "HTC15 Google Nexus One Black",
-			"price": "$206.99",
-			"text": "Lorem ipsum dolor amiet consectetuer."
-		},
-		{
-			"src" : "image/item-mobilephone.png",
-			"fullName" : "HTC16 Google Nexus One Black",
 			"price": "$206.99",
 			"text": "Lorem ipsum dolor amiet consectetuer."
 		}

@@ -1,4 +1,5 @@
 @import 'import/tabs.scss';
+@import './import/productBlock.scss';
 @import 'import/slider.scss';
 @import './import/mixin.scss';
 
@@ -42,17 +43,21 @@ main {
 						font-weight: bold;
 						color: $blue;
 					}
+					&::before {
+						content: url(../image/arrowLittle.png);
+						display: inline-block;
+						width: 3px;
+						height: 3px;
+						position: absolute;
+						top: -2px;
+						left: 15px;
+					}
 				}
 			}
 		}
 		#category__content {
 			max-width: 690px;
-			.content__block {
-				display: inline-block;
-				margin: 5px;
-				width: 165px;
-				height: 300px;
-			}
+			margin-left: 25px;
 		}
 	}
 }
