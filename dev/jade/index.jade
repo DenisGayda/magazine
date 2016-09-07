@@ -8,16 +8,13 @@ block content
 	main.wraper
 		section.section__tabs
 			include include/tabs
-		section.section__category
-			.category__menu
-				.title Categories
-				+addLists(['Sound devices', 'Video game consoles', 'Cell/mobile/wireless phones', 'Home security systems', 'Cameras', 'Home theater systems', 'TVs', 'Computers', 'Games/movies/music', 'Accessories', 'Office', 'House wears'], 'menu__list', 'menu__list_item')
-			#category__content
+		section#react__component
 				
 		section.section__slider
 			include include/slider
 block script
 	+addJs(['script', 'bundle'])
+
 
 
 

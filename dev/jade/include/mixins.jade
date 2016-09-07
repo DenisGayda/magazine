@@ -7,10 +7,11 @@ mixin addCss(arg)
 	each val in arg
 		link(rel='stylesheet' href='css/#{val}.css')
 
-mixin addLists(arr, arr1, arr2)
+mixin addMenu(arr, arr1, arr2)
 	ul(class=arr1)
-		each index in arr
-			li(class=arr2) #{index}
+		each val in arr
+			li(class=arr2)
+				a(href='specials.html' data-database='#{val.data}') #{val.name}
 
 mixin addJs(arg)
 	each val in arg

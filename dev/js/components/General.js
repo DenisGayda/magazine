@@ -6,7 +6,7 @@ import Main from './Main.js';
 class GeneralComponent extends React.Component {
 	render() {
 		let location = window.location.pathname
-		let page = (location == "/magazine/specials.html") ? "special" : "home";
+		let page = (location == "/specials.html") ? "special" : "home";
 		return (
 			<div>
 				<Main page={page} />
@@ -16,5 +16,5 @@ class GeneralComponent extends React.Component {
 }
 
 ReactDOM.render (
-	<GeneralComponent />, document.getElementById('category__content')
+	<GeneralComponent />, document.getElementById('react__component')
 )
