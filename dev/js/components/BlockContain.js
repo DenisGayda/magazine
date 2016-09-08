@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 export default class BlockContain extends React.Component {
 	render() {
 		let textOlolo;

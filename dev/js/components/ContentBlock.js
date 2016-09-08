@@ -2,11 +2,11 @@ import React from 'react';
 import ReactMixin from 'react-mixin';
 import ReactFireMixin from 'reactfire';
 import BlockContain from './BlockContain.js';
-import LinkMenu from './LinkMenu.js';
+import Database from './Database.js';
 
 
 export default class ContentBlock extends React.Component {
-	
+
 	constructor() {
 		super();
 
@@ -25,9 +25,8 @@ export default class ContentBlock extends React.Component {
 	}
 	setItems(arg){
 		this.setState({
-			item: <LinkMenu data={arg} page={this.props.page}/>
+			item: <Database data={arg} />
 		})
-		console.log(this.state.item)
 	}
 	onclickItems(arr) {
 		this.setItems(arr)
@@ -36,10 +35,10 @@ export default class ContentBlock extends React.Component {
 		return <div className="category__content">
 			{
 				arr.map((obj, index) => {
-					return <BlockContain key={index} page={arg} data={obj} />
+					return <BlockContain key={index} data={obj} />
 				})
 			}
-		</div>;
+		</div>
 	}
 
 	componentDidMount() {

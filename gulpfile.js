@@ -14,7 +14,10 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglifyjs'),
 	notify = require('gulp-notify'),
 	webpackStream = require('webpack-stream'),
+	babel = require('gulp-babel'),
+	Firebase = require('firebase'),
 	webpack = webpackStream.webpack;
+
 
 gulp.task('mincss', function() {
 	return gulp.src('./dev/sass/*.scss')
@@ -63,7 +66,11 @@ gulp.task('webpack', function(){
 				compress:{
 					warnings: true
 				}
-			})
+			}),
+			new webpack.optimize.CommonsChunkPlugin({
+				children: true,
+				async: true,
+			}),
 		]	
 	}
 	return gulp.src('./dev/js/components/*.js')
@@ -87,8 +94,11 @@ gulp.task('compress', function(){
 				message: '<%= error.message %>',
 			}))
 		}))
-		.pipe(uglify())
-		.pipe(concat('script.js'))
+		.pipe(babel({
+            presets: ['es2015', 'react']
+        }))
+		// .pipe(uglify())
+		// .pipe(concat('script.js'))
 		.pipe(gulp.dest('./site/js/'))
 		.pipe(notify('JavaScript - OK!'))
 		.pipe(browserSync.stream())
